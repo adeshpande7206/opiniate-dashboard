@@ -191,6 +191,14 @@
   }
 }
 
+.button-mobile {
+  margin: 20px;
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
 ::placeholder {
   padding: 2% 5%;
 }
