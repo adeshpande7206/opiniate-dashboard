@@ -88,6 +88,10 @@
 }
 
 /* DASHBOARD STYLES */
+.dashboard-wrapper {
+  overflow: hidden;
+}
+
 .header {
   margin: 0;
   height: 90vh;
@@ -103,6 +107,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #f6f6f6;
+}
+
+@media screen and (max-width: 1024px) {
+  .header--side-menu {
+    display: none;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 
 .header--side-menu .contact-details {
@@ -129,7 +142,7 @@
 }
 
 .header--side-menu .contact-details .personal-details div.user img {
-  width: 75px;
+  width: 60px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -160,7 +173,7 @@
 }
 
 .header--main-content {
-  background: url("../images/dashboard-404.svg") center no-repeat orangered;
+  background: url("../images/dashboard-404.svg") center no-repeat;
   background-size: 90% 90%;
   text-align: center;
   position: relative;
@@ -219,12 +232,13 @@
   text-align: center;
   position: relative;
   height: 90vh;
+  margin-left: 50px;
 }
 
 .button-mobile {
   margin: 20px;
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -244,5 +258,67 @@
 
 ::placeholder {
   padding: 2% 5%;
+}
+
+.contacts {
+  border-top: 1px solid #000;
+  padding-top: 20px;
+  overflow: hidden auto;
+  height: 50%;
+}
+
+.contacts .user-contact-detail {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 100px;
+      grid-template-columns: 50px 100px;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  grid-auto-rows: 50px;
+  grid-gap: 30px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contacts .user-contact-detail img {
+  margin: 0 20px;
+}
+
+.hamburger.dashboard {
+  background-color: transparent;
+  width: 100px;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hamburger.dashboard img {
+  width: 50px;
+  cursor: pointer;
+  height: 100vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-animation: slideLeftRight 1.5s linear infinite;
+          animation: slideLeftRight 1.5s linear infinite;
+}
+
+.sidemenu-hamburger {
+  position: absolute;
+  -webkit-animation: slideInOut 1s ease forwards;
+          animation: slideInOut 1s ease forwards;
+  display: block;
+  top: 10vh;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
